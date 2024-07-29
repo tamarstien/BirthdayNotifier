@@ -42,5 +42,9 @@ export class UserService {
         return 'updated';
     }
  
+    async deleteUser(id) {
+        const result = await this.userModel.findByIdAndDelete(id);
+        return 'deleted';
+    }
 
 }

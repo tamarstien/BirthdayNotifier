@@ -46,6 +46,15 @@ export class UserController {
             console.log(error);
         }
     }
-   
+
+     @Delete('/:id')
+    deleteLocation(@Param('id') id) {
+        try {
+            const result = this.userService.deleteUser(id);
+            return result;
+        } catch (error) {
+            console.log(error);
+        }
+    }
 
 }
