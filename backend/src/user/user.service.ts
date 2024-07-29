@@ -19,15 +19,7 @@ export class UserService {
         return result as  User;
     }
      
-    // async create(user: User) {
-    //     const newUser = new this.userModel({
-    //         userName: user.userName,
-    //         birthDate: user.birthDate
-    //     });
-    //     const result = await newUser.save();
-    //     return result.userName;
-    // }
-
+ 
     async insertUser(newUser: User) {
         // console.log(newUser.userName)
         const user = new this.userModel({
@@ -40,9 +32,15 @@ export class UserService {
         return result;
     }
 
-    // async create(userName: string, birthDate: Date): Promise<User> {
-    //     const newUser = new this.userModel({ userName, birthDate });
-    //     return newUser.save();
-    //   }
+    async updateUser(id, newUser: User) {
+        const user = new this.userModel({
+            userName: newUser.userName,
+            birthDate: newUser.birthDate
+          
+        })
+        const result = await this.userModel.findByIdAndUpdate(id, newUser);
+        return 'updated';
+    }
+ 
 
 }

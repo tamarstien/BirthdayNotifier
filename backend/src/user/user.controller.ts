@@ -25,15 +25,16 @@ export class UserController {
         }
     }
 
-    // @Post()
-    // create(@Body() user: User) {
-    //     try {
-    //         const result = this.userService.create(user)
-    //         return result;
-    //     } catch (error) {
-    //         console.log(error)
-    //     }
-    // }
+    @Put('/:id')
+    updateUser(@Param('id') id, @Body() newUser: User) {
+        try {
+            const result = this.userService.updateUser(id, newUser);
+            return result;
+        } catch (error) {
+            console.log(error);
+        }
+    }
+
 
     @Post()
     insertUser(@Body() newUser: User) {
@@ -45,9 +46,6 @@ export class UserController {
             console.log(error);
         }
     }
-    // @Post()
-    // create(@Body() createUserDto: { userName: string, birthDate: Date }): Promise<User> {
-    //   return this.userService.create(createUserDto.userName, createUserDto.birthDate);
-    // }
+   
 
 }
