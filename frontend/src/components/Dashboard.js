@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, {useEffect,useState} from 'react';
+import '../styles/Dashboard.css'; 
 
 
 const Dashboard = ()=>{
@@ -38,13 +39,13 @@ const Dashboard = ()=>{
       }, [contacts]);
 
     return (
-        <div>/
+        <div>
             {/* // קריאת שרת גט לקבלת כל המשתמשים ☝
-            //פלטור לפי החודש הקרוב-
+            //פלטור לפי החודש הקרוב-☝
             לראות את התאריך של החודש ולהציג את כל מי שהחודש שלו שווה לתאריך
             //הצגת המשתמשים בטבלה
             <h1>Dashboard</h1> */}
-            <p>Welcome to your dashboard!</p>
+            <p>Birthdays This Month</p>
             <ul>
         {filteredContacts.map(contact => (
           <li key={contact.id}>

@@ -1,0 +1,13 @@
+
+  body{
+ 
+      background-image: url('../images/background.jpg');
+      background-size: cover; 
+      background-position: center; /* מיקום התמונה במרכז הקומפוננטה */
+      height: 100vh; /* גובה הקומפוננטה */
+      display: flex; /* הגדרת תצוגה של פלקסבוקס */
+      flex-direction: column; /* כיוון פלקס קולוני */
+      justify-content: center; /* מרכוז תוכן לאורך הציר הראשי */
+      align-items: center; /* מרכוז תוכן לאורך הציר המשני */
+      color: rgb(24, 7, 7); 
+  }
