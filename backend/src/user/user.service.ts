@@ -24,7 +24,8 @@ export class UserService {
         // console.log(newUser.userName)
         const user = new this.userModel({
             userName: newUser.userName,
-            birthDate: newUser.birthDate
+            birthDate: newUser.birthDate,
+            email:newUser.email
 
         })
         const result = await user.save();
@@ -35,7 +36,9 @@ export class UserService {
     async updateUser(id, newUser: User) {
         const user = new this.userModel({
             userName: newUser.userName,
-            birthDate: newUser.birthDate
+            birthDate: newUser.birthDate,
+            email:newUser.email
+
           
         })
         const result = await this.userModel.findByIdAndUpdate(id, newUser);
