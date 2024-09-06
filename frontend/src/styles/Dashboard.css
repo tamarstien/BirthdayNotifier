@@ -8,6 +8,10 @@
       display: flex; /* הגדרת תצוגה של פלקסבוקס */
       flex-direction: column; /* כיוון פלקס קולוני */
       justify-content: center; /* מרכוז תוכן לאורך הציר הראשי */
-      align-items: center; /* מרכוז תוכן לאורך הציר המשני */
+      align-items: center; 
       color: rgb(24, 7, 7); 
+  }
+
+  .ul{
+    list-style-type: none
   }

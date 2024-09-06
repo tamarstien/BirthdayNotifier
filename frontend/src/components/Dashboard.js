@@ -46,7 +46,7 @@ const Dashboard = ()=>{
             //הצגת המשתמשים בטבלה
             <h1>Dashboard</h1> */}
             <p>Birthdays This Month</p>
-            <ul>
+            <ul className='ul'>
         {filteredContacts.map(contact => (
           <li key={contact.id}>
             {contact.userName} - {new Date(contact.birthDate).toLocaleDateString()}
