@@ -49,7 +49,7 @@ const Dashboard = ()=>{
             <ul className='ul'>
         {filteredContacts.map(contact => (
           <li key={contact.id}>
-            {contact.userName} - {new Date(contact.birthDate).toLocaleDateString()}
+            {contact.userName} - {new Date(contact.birthDate).toLocaleDateString()}-{contact.email}
           </li>
         ))}
       </ul>
