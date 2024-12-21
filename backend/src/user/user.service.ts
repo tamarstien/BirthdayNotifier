@@ -47,7 +47,7 @@ export class UserService {
  
     async deleteUser(id) {
         const result = await this.userModel.findByIdAndDelete(id);
-        return 'deleted';
+        return 'deleteddd';
     }
 
 }
